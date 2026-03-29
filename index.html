@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe | Premium Salon</title>
+    <meta name="description" content="Experience premium salon services at Luxe. Book your appointment today.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Luxe.</div>
+        <ul class="nav-links">
+            <li><a href="#" data-target="landing" class="active">Home</a></li>
+            <li><a href="#" data-target="services">Services</a></li>
+            <li><a href="#" data-target="stylists">Stylists</a></li>
+            <li><a href="https://wa.me/9664320534?text=Hello" target="_blank" class="btn-nav">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main id="app-content">
+        <!-- Landing Page -->
+        <section id="landing" class="view active-view">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="fade-in">Elevate Your<br><em>Style & Grace</em></h1>
+                    <p class="fade-in delay-1">Experience the pinnacle of hair care and styling in our premium salon.</p>
+                    <button class="btn fade-in delay-2" onclick="navigateTo('booking')">Book an Appointment</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Menu -->
+        <section id="services" class="view hidden-view">
+            <div class="container section-padding">
+                <h2 class="section-title fade-in">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-category fade-in delay-1">
+                        <h3>Hair Cut & Styling</h3>
+                        <ul class="service-list">
+                            <li>
+                                <div class="service-info">
+                                    <h4>Women's Haircut</h4>
+                                    <p>Includes wash, precision cut, and blowout.</p>
+                                </div>
+                                <span class="price">$85+</span>
+                            </li>
+                            <li>
+                                <div class="service-info">
+                                    <h4>Men's Haircut</h4>
+                                    <p>Includes wash, cut, and hot towel finish.</p>
+                                </div>
+                                <span class="price">$45+</span>
+                            </li>
+                            <li>
+                                <div class="service-info">
+                                    <h4>Signature Blowout</h4>
+                                    <p>Luxurious wash and voluminous blowout.</p>
+                                </div>
+                                <span class="price">$55+</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="service-category fade-in delay-2">
+                        <h3>Color & Highlights</h3>
+                        <ul class="service-list">
+                            <li>
+                                <div class="service-info">
+                                    <h4>Full Balayage</h4>
+                                    <p>Hand-painted highlights for a natural, sun-kissed look.</p>
+                                </div>
+                                <span class="price">$220+</span>
+                            </li>
+                            <li>
+                                <div class="service-info">
+                                    <h4>Single Process Color</h4>
+                                    <p>All-over color application for rich, vibrant tones.</p>
+                                </div>
+                                <span class="price">$110+</span>
+                            </li>
+                            <li>
+                                <div class="service-info">
+                                    <h4>Root Touch-up</h4>
+                                    <p>Conceal regrowth and refresh your color.</p>
+                                </div>
+                                <span class="price">$80+</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stylist Gallery -->
+        <section id="stylists" class="view hidden-view">
+            <div class="container section-padding">
+                <h2 class="section-title fade-in">Meet Our Stylists</h2>
+                <div class="stylists-grid">
+                    <div class="stylist-card fade-in delay-1">
+                        <div class="stylist-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Emma - Master Stylist">
+                        </div>
+                        <div class="stylist-info">
+                            <h3>Emma</h3>
+                            <p class="role">Master Stylist & Colorist</p>
+                            <p class="bio">With over 10 years of experience, Emma specializes in lived-in color and balayage techniques.</p>
+                            <button class="btn-outline" onclick="bookStylist('Emma')">Book Emma</button>
+                        </div>
+                    </div>
+                    
+                    <div class="stylist-card fade-in delay-2">
+                        <div class="stylist-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Marcus - Senior Stylist">
+                        </div>
+                        <div class="stylist-info">
+                            <h3>Marcus</h3>
+                            <p class="role">Senior Stylist</p>
+                            <p class="bio">Marcus is an expert in precision cutting and modern men's grooming.</p>
+                            <button class="btn-outline" onclick="bookStylist('Marcus')">Book Marcus</button>
+                        </div>
+                    </div>
+
+                    <div class="stylist-card fade-in delay-3">
+                        <div class="stylist-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sophia - Texture Specialist">
+                        </div>
+                        <div class="stylist-info">
+                            <h3>Sophia</h3>
+                            <p class="role">Texture Specialist</p>
+                            <p class="bio">Sophia's passion lies in enhancing natural curls and creating seamless extensions.</p>
+                            <button class="btn-outline" onclick="bookStylist('Sophia')">Book Sophia</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Experience -->
+        <section id="booking" class="view hidden-view">
+            <div class="container section-padding">
+                <div class="booking-wrapper fade-in">
+                    <h2 class="section-title text-center">Book Your Appointment</h2>
+                    <div class="booking-progress">
+                        <div class="progress-step active" data-step="1">1. Service</div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="2">2. Stylist</div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="3">3. Date & Time</div>
+                    </div>
+
+                    <div class="booking-form-container">
+                        <!-- Step 1 -->
+                        <div class="form-step active-step" id="step-1">
+                            <h3>Select a Service</h3>
+                            <div class="options-grid">
+                                <div class="option-card" onclick="selectBookingOption('service', 'Womens Haircut', this)">
+                                    <h4>Women's Haircut</h4>
+                                    <p>60 min • $85+</p>
+                                </div>
+                                <div class="option-card" onclick="selectBookingOption('service', 'Mens Haircut', this)">
+                                    <h4>Men's Haircut</h4>
+                                    <p>45 min • $45+</p>
+                                </div>
+                                <div class="option-card" onclick="selectBookingOption('service', 'Balayage', this)">
+                                    <h4>Full Balayage</h4>
+                                    <p>180 min • $220+</p>
+                                </div>
+                                <div class="option-card" onclick="selectBookingOption('service', 'Blowout', this)">
+                                    <h4>Signature Blowout</h4>
+                                    <p>45 min • $55+</p>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn disabled" id="btn-next-1" onclick="nextStep(2)">Continue</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="form-step" id="step-2">
+                            <h3>Select a Stylist</h3>
+                            <div class="options-grid">
+                                <div class="option-card" onclick="selectBookingOption('stylist', 'Any Stylist', this)">
+                                    <h4>Any Available Stylist</h4>
+                                </div>
+                                <div class="option-card" onclick="selectBookingOption('stylist', 'Emma', this)">
+                                    <h4>Emma</h4>
+                                    <p>Master Stylist</p>
+                                </div>
+                                <div class="option-card" onclick="selectBookingOption('stylist', 'Marcus', this)">
+                                    <h4>Marcus</h4>
+                                    <p>Senior Stylist</p>
+                                </div>
+                                <div class="option-card" onclick="selectBookingOption('stylist', 'Sophia', this)">
+                                    <h4>Sophia</h4>
+                                    <p>Texture Specialist</p>
+                                </div>
+                            </div>
+                            <div class="form-actions row-between">
+                                <button class="btn-outline" onclick="prevStep(1)">Back</button>
+                                <button class="btn disabled" id="btn-next-2" onclick="nextStep(3)">Continue</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="form-step" id="step-3">
+                            <h3>Select Date & Time</h3>
+                            <div class="datetime-grid">
+                                <div class="date-picker">
+                                    <label for="booking-date">Date</label>
+                                    <input type="date" id="booking-date" onchange="checkStep3()">
+                                </div>
+                                <div class="time-picker">
+                                    <label for="booking-time">Time</label>
+                                    <select id="booking-time" onchange="checkStep3()">
+                                        <option value="">Select a time</option>
+                                        <option value="09:00 AM">09:00 AM</option>
+                                        <option value="10:30 AM">10:30 AM</option>
+                                        <option value="01:00 PM">01:00 PM</option>
+                                        <option value="03:00 PM">03:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="booking-summary" id="booking-summary">
+                                <!-- Populated by JS -->
+                            </div>
+                            <div class="form-actions row-between">
+                                <button class="btn-outline" onclick="prevStep(2)">Back</button>
+                                <button class="btn disabled" id="btn-next-3" onclick="confirmBooking()">Confirm Booking</button>
+                            </div>
+                        </div>
+
+                        <!-- Success -->
+                        <div class="form-step text-center" id="step-success">
+                            <div class="success-icon">✓</div>
+                            <h3>Booking Confirmed!</h3>
+                            <p>We've sent a confirmation email with your appointment details.</p>
+                            <button class="btn mt-4" onclick="navigateTo('landing')">Return to Home</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">Luxe.</div>
+            <div class="footer-info">
+                <p>123 Elegance Ave, Style District, NY 10001</p>
+                <p>+1 (555) 123-4567 • hello@luxesalon.com</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
